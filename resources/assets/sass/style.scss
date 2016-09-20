@@ -1,0 +1,25 @@
+@import "partials/common/variables";
+@import "partials/common/commonClasses";
+@import "partials/common/footer";
+@import "partials/common/navbar";
+@import "partials/common/head";
+@import "partials/common/content";
+@import "partials/common/adaptivMenu";
+@import "partials/common/index-page";
+@import "partials/common/login";
+@import "partials/common/signup";
+@import "partials/common/removeAc";
+@import "partials/common/settings";
+@import "partials/common/mixin";
+
+
+@import "partials/search/search";
+@import "partials/search_result/searchResult";
+
+
+
+
+body,div {
+    display: block;
+
+}
