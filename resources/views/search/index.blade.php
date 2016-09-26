@@ -33,7 +33,7 @@
               <div class="row">
                   <div class="col-md-12">
                       <div class="img">
-                          <img class="img-responsive" src="img/s65_no_pic.png" alt="" />
+                          <img class="img-responsive" src="{{ url('img/s65_no_pic.png') }}" alt="" />
                       </div>
                       <div class="info">
                           <h3 class="marginClear">
@@ -60,7 +60,7 @@
 
                   <div class="col-md-12">
                       <div class="img">
-                          <img class="img-responsive" src="img/s65_no_pic.png" alt="" />
+                          <img class="img-responsive" src="{{ url('img/s65_no_pic.png') }}" alt="" />
                       </div>
                       <div class="info">
                           <h3 class="marginClear">
@@ -87,7 +87,7 @@
 
                   <div class="col-md-12">
                       <div class="img">
-                          <img class="img-responsive" src="img/s65_no_pic.png" alt="" />
+                          <img class="img-responsive" src="{{ url('img/s65_no_pic.png') }}" alt="" />
                       </div>
                       <div class="info">
                           <h3 class="marginClear">

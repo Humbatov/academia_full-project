@@ -7,7 +7,7 @@
        <div class="col-xs-12">
          <div class="Header">
            <div class="u-floatLeft">
-             <img class="Logo" src="img/academia-logo-redesign-2015.svg" class="logo"" style="width: 146px;height: 18px;" alt="Academia logo"></div>
+             <img class="Logo" src="{{ url('img/academia-logo-redesign-2015.svg') }}" class="logo"" style="width: 146px;height: 18px;" alt="Academia logo"></div>
              <div class="u-floatRight"><a class="Button Button--sm Button--inverseGray" href="/login" style="z-index: 1;">Log In</a></div>
 
        </div>
@@ -40,7 +40,7 @@
                       </div>
 
                          <div class="Media--right Media--middle hidden-xs">
-                            <img class="Media-object CitationIllustration" src="img/citation-illustration.svg" alt="Citation illustration">
+                            <img class="Media-object CitationIllustration" src="{{ url('img/citation-illustration.svg') }}" alt="Citation illustration">
                          </div>
 
                    </div>

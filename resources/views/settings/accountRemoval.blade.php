@@ -9,7 +9,7 @@
   <section class="container main">
     <div class="row mainRow">
       <div class="col-md-offset-3 col-md-9 setImg">
-        <div><img src="img/1.png"></div>
+        <div><img src="{{ url('img/1.png') }}"></div>
         <h4 class="myac">My Account</h4>
       </div>
       <div class="row orta">

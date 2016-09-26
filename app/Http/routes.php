@@ -11,30 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
-Route::get('/search', function () {
-    return view('search');
-});
-Route::get('/search1', function () {
-    return view('search1');
-});
-Route::get('/search1', function () {
-    return view('search2');
-});
-Route::get('/home', function () {
-    return view('home');
-});
-Route::get('/login', function () {
-    return view('login');
-});
-Route::get('/settingsAccount', function () {
-    return view('removeAc');
-});
-Route::get('/settingsRemove', function () {
-    return view('settingsRemove');
-});
-Route::get('/signUp', function () {
-    return view('signUp');
-});
+Route::resource('/','PagesController@index');
+Route::resource('home','PagesController@home');
+Route::resource('login','PagesController@login');
+Route::resource('signUp','PagesController@signUp');
+Route::resource('search/documents','SearchController@searchDocument');
+Route::resource('search/peoples','SearchController@searchPeople');
+Route::resource('search','SearchController@index');
+Route::resource('settings/account-removal','SettingsController@removal');
+Route::resource('settings','SettingsController@account');

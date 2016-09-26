@@ -11,7 +11,7 @@
                  <div class="Content1 center-block">
                      <div class="u-taCenter">
                      <!-- Logo DEYISHIKLIK -->
-                         <img class="Logo1" src="img/academia-logo-redesign-2015.svg" class="logo"" style="width: 178px;height: 22px;" alt="Academia logo redesign 2015">
+                         <img class="Logo1" src="{{ ur('img/academia-logo-redesign-2015.svg') }}" class="logo"" style="width: 178px;height: 22px;" alt="Academia logo redesign 2015">
                      </div>
 
                      <div class="row u-mt2x">

@@ -36,7 +36,7 @@
                   <div class="col-md-12">
                       <div class="img-container">
                           <div class="img-icon">
-                              <img src="img/IMG_0823.JPG" alt="" />
+                              <img src="/img/IMG_0823.JPG" alt="" />
                           </div>
                       </div>
                       <div class="info">
@@ -58,7 +58,7 @@
                   <div class="col-md-12">
                       <div class="img-container">
                           <div class="img-icon">
-                              <img src="img/IMG_0823.JPG" alt="" />
+                              <img src="/img/IMG_0823.JPG" alt="" />
                           </div>
                       </div>
                       <div class="info">
@@ -80,7 +80,7 @@
                   <div class="col-md-12">
                       <div class="img-container">
                           <div class="img-icon">
-                              <img src="img/IMG_0823.JPG" alt="" />
+                              <img src="/img/IMG_0823.JPG" alt="" />
                           </div>
                       </div>
                       <div class="info">

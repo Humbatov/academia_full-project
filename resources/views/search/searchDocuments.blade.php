@@ -27,8 +27,8 @@
           <div class="category">
               <div class="container">
                   <div class="col-md-12">
-                      <a href="search_result-people.html">People</a>
-                      <a class="triangle" href="search_result-document.html">Document</a>
+                      <a href="{{ url('/search/peoples') }}">People</a>
+                      <a class="triangle" href="{{ url('/search/documents') }}">Document</a>
                   </div>
               </div>
           </div>

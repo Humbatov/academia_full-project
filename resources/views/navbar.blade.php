@@ -10,7 +10,7 @@
                     <span class="icon-bar"></span>
                 </a>
                 <a class="navbar-brand" href="#">
-                    <img src="img/A.svg">
+                    <img src="{{ url('img/A.svg') }}">
                 </a>
             </div>
             <div id="slidemenu">
@@ -35,7 +35,7 @@
                         <li>
                             <div class="pull-right profileImg">
                                 <a href="#" class="collapseMenu">
-                                    <img src="img/IMG_0823.JPG">
+                                    <img src="{{ url('img/IMG_0823.JPG') }}">
                                 </a>
                                 <ul class="triangle">
                                     <li>
@@ -61,7 +61,7 @@
                     <li>
                         <div class="profileImg pull-left">
                             <a href="#" class="collapseMenu">
-                                <img src="img/IMG_0823.JPG">
+                                <img src="{{ url('img/IMG_0823.JPG') }}">
                             </a>
                         </div>
                         <a class="pull-left user-name" href="#">Tofiq Aliyev</a>

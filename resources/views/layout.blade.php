@@ -13,11 +13,11 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
-    <link rel="stylesheet" href="css/vendor/font-awesome.min.css">
-    <link rel="stylesheet" href="css/vendor/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <link rel="stylesheet" href="{{ url('/css/vendor/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{ url('/css/vendor/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{ url('/css/vendor/bootstrap-theme.min.css')}}">
+    <link rel="stylesheet" href="{{ url('/css/style.css')}}">
+    <script src="{{ url('/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js')}}"></script>
 </head>
 
 
@@ -41,10 +41,10 @@
   <!-- Page content start -->
 
 
-    <script src="js/vendor/jquery.js"></script>
+    <script src="{{ url ('/js/vendor/jquery.js') }}"></script>
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
-    <script src="js/vendor/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="{{ url ('/js/vendor/bootstrap.min.js') }}"></script>
+    <script src="{{ url ('/js/main.js') }}"></script>
 </body>
 
 </html>
