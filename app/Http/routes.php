@@ -11,12 +11,28 @@
 |
 */
 
-Route::resource('/','PagesController@index');
-Route::resource('home','PagesController@home');
-Route::resource('login','PagesController@login');
+
+
+
+
+
+// Route::auth();
+
+Route::get('/','PagesController@index');
+// Route::group(['middleware' => 'auth' ] , function(){
+//
+//     Route::resource('search/documents','SearchController@searchDocument');
+//     Route::resource('search/peoples','SearchController@searchPeople');
+//     Route::resource('search','SearchController@index');
+//     Route::resource('settings/account-removal','SettingsController@removal');
+//     Route::resource('settings','SettingsController@account');
+// });
+
+
 Route::resource('signUp','PagesController@signUp');
-Route::resource('search/documents','SearchController@searchDocument');
-Route::resource('search/peoples','SearchController@searchPeople');
-Route::resource('search','SearchController@index');
-Route::resource('settings/account-removal','SettingsController@removal');
-Route::resource('settings','SettingsController@account');
+Route::resource('login','PagesController@login');
+
+
+
+
+Route::get('/home', 'HomeController@index');

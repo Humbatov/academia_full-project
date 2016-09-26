@@ -3,16 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Auth;
 use App\Http\Requests;
 
 class PagesController extends Controller
 {
     public function index(){
-      return view('pages.index');
+      if(Auth::guest()){
+        return view('pages.index');
+      } else {
+        return view('pages.home');
+      }
     }
     public function home(){
-      return view('pages.home');
+
     }
     public function login(){
       return view('pages.login');
