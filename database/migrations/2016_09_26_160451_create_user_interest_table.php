@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUsersInterestsBindsTable extends Migration
+class CreateUserInterestTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,12 +12,11 @@ class CreateUsersInterestsBindsTable extends Migration
      */
     public function up()
     {
-        Schema::create('users_interests_binds', function (Blueprint $table) {
+        Schema::create('user_interest', function (Blueprint $table) {
           $table->integer('user_id')->unsigned()->index();
           $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-          $table->integer('research_interest_id')->unsigned()->index();
-          $table->foreign('research_interest_id')->references('id')->on('research_interests')->onDelete('cascade');
-
+          $table->integer('interest_id')->unsigned()->index();
+          $table->foreign('interest_id')->references('id')->on('interests')->onDelete('cascade');
         });
     }
 
@@ -28,6 +27,6 @@ class CreateUsersInterestsBindsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('users_interests_binds');
+        Schema::drop('user_interest');
     }
 }

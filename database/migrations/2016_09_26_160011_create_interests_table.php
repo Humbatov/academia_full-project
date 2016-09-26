@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateResearchInterestsTable extends Migration
+class CreateInterestsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,10 +12,11 @@ class CreateResearchInterestsTable extends Migration
      */
     public function up()
     {
-        Schema::create('research_interests', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('name',20)->unique();
-            $table->timestamps();
+        Schema::create('interests', function (Blueprint $table) {
+          $table->increments('id');
+          $table->string('name',20)->unique();
+          $table->timestamps();
+
         });
     }
 
@@ -26,6 +27,6 @@ class CreateResearchInterestsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('research_interests');
+        Schema::drop('interests');
     }
 }

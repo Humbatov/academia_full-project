@@ -23,4 +23,12 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function interests()
+    {
+      return $this->belongsToMany(Interest::class, 'user_interest');
+    }
+    public function files(){
+      return $this->hasMany(File::class);
+    }
 }
