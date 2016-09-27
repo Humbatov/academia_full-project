@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">{{ trans('quickadmin::auth.login-login') }}</div>
+                <div class="panel-heading">{{ trans('quickadmin::auth.reset-reset_password') }}</div>
                 <div class="panel-body">
                     @if (count($errors) > 0)
                         <div class="alert alert-danger">
@@ -21,13 +21,14 @@
                     <form class="form-horizontal"
                           role="form"
                           method="POST"
-                          action="{{ url('login') }}">
+                          action="{{ url('password/reset') }}">
                         <input type="hidden"
                                name="_token"
                                value="{{ csrf_token() }}">
+                        <input type="hidden" name="token" value="{{ $token }}">
 
                         <div class="form-group">
-                            <label class="col-md-4 control-label">{{ trans('quickadmin::auth.login-email') }}</label>
+                            <label class="col-md-4 control-label">{{ trans('quickadmin::auth.reset-email') }}</label>
 
                             <div class="col-md-6">
                                 <input type="email"
@@ -38,7 +39,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label class="col-md-4 control-label">{{ trans('quickadmin::auth.login-password') }}</label>
+                            <label class="col-md-4 control-label">{{ trans('quickadmin::auth.reset-password') }}</label>
 
                             <div class="col-md-6">
                                 <input type="password"
@@ -48,11 +49,12 @@
                         </div>
 
                         <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <label>
-                                    <input type="checkbox"
-                                           name="remember">{{ trans('quickadmin::auth.login-remember_me') }}
-                                </label>
+                            <label class="col-md-4 control-label">{{ trans('quickadmin::auth.reset-confirm_password') }}</label>
+
+                            <div class="col-md-6">
+                                <input type="password"
+                                       class="form-control"
+                                       name="password_confirmation">
                             </div>
                         </div>
 
@@ -61,7 +63,7 @@
                                 <button type="submit"
                                         class="btn btn-primary"
                                         style="margin-right: 15px;">
-                                    {{ trans('quickadmin::auth.login-btnlogin') }}
+                                    {{ trans('quickadmin::auth.reset-btnreset_password') }}
                                 </button>
                             </div>
                         </div>
