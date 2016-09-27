@@ -8,7 +8,8 @@
          <div class="Header">
            <div class="u-floatLeft">
              <img class="Logo" src="{{ url('img/academia-logo-redesign-2015.svg') }}" class="logo"" style="width: 146px;height: 18px;" alt="Academia logo"></div>
-             <div class="u-floatRight"><a class="Button Button--sm Button--inverseGray" href="/login" style="z-index: 1;">Log In</a></div>
+             <div class="u-floatRight">
+               <a href="{{ URL('login') }}" class="Button Button--sm Button--inverseGray" style="z-index: 1;">Log In</a></div>
 
        </div>
       </div>

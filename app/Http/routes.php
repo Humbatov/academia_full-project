@@ -19,20 +19,18 @@
 Route::auth();
 
 Route::get('/','PagesController@index');
-Route::group(['middleware' => 'auth' ] , function(){
 
-    Route::resource('search/documents','SearchController@searchDocument');
-    Route::resource('search/peoples','SearchController@searchPeople');
-    Route::resource('search','SearchController@index');
-    Route::resource('settings/account-removal','SettingsController@removal');
-    Route::resource('settings','SettingsController@account');
+Route::group(['middleware' => 'auth' ] , function(){
+    Route::get('search/documents','SearchController@searchDocument');
+    Route::get('search/peoples','SearchController@searchPeople');
+    Route::get('search','SearchController@index');
+    Route::get('settings/account-removal','SettingsController@removal');
+    Route::get('settings','SettingsController@account');
 });
 
 
-Route::resource('signUp','PagesController@signUp');
+Route::get('signUp','PagesController@signUp');
 // Route::resource('login','PagesController@login');
-
-
 
 
 Route::get('/home', 'HomeController@index');

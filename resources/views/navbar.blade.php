@@ -23,7 +23,7 @@
                 </form>
 
                 <ul id="navbar-desktop" class="nav navbar-nav navbar-right">
-                    <li><a class="nav-link" href="#">HOME</a></li>
+                    <li><a class="nav-link" href="{{ url('/') }}">HOME</a></li>
                     <li><a href="#" class="btn button  upload "><i class="fa fa-upload"></i> UPLOAD</a></li>
                     <li>
                         <a href="#" class="btn button-notif button"><i class="fa fa-envelope-o"></i></a>
@@ -49,7 +49,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="{{ url('logout') }}">
                                             <div>Log out</div>
                                         </a>
                                     </li>

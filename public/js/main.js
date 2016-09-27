@@ -50,7 +50,7 @@ $(document).ready(function() {
 //collapse profil menu
 $(document).ready(function() {
     $('a').on('click', function(e) {
-        e.preventDefault();
+        //e.preventDefault();
     });
     $('.profileImg ').hover(function() {
         clearTimeout($.data(this, 'timer'));
