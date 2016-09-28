@@ -20,8 +20,6 @@ class PasswordController extends Controller
 
     use ResetsPasswords;
 
-    protected $redirectTo = '';
-
     /**
      * Create a new password controller instance.
      *
@@ -29,7 +27,6 @@ class PasswordController extends Controller
      */
     public function __construct()
     {
-        $this->redirectTo = config('quickadmin.homeRoute');
         $this->middleware('guest');
     }
 }
