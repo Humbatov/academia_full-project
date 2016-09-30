@@ -34,3 +34,7 @@ Route::get('signUp','PagesController@signUp');
 
 
 Route::get('/home', 'HomeController@index');
+Route::get('/upload',function(){
+
+   return view('upload');
+});
