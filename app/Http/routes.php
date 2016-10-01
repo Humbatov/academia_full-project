@@ -19,6 +19,7 @@ Route::get('/edit', function(){
 });
 
 Route::auth();
+Route::get('user/{id}/{name}{surname}','PagesController@userprofile');
 
 Route::get('/','PagesController@index');
 
@@ -33,7 +34,7 @@ Route::group(['middleware' => 'auth' ] , function(){
     Route::resource('settings/account-removal','SettingsController@removal');
     Route::resource('settings','SettingsController@account');
     Route::resource('myprofile','PagesController@myprofile');
-    Route::resource('userprofile','PagesController@userprofile');
+    //Route::resource('userprofile','PagesController@userprofile');
     Route::resource('fileUpload','PagesController@fileUpload');
     Route::resource('fileDetails','PagesController@fileDetails');
 

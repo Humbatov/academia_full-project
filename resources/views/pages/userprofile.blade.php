@@ -18,18 +18,40 @@
                 <div>
                   <ul>
                        <li>
-                        <a href="#">User Name</a>
+                        <a href="#">{{$user->name}} {{$user->surname}}</a>
                        </li>
                      </ul>
                      <div class="UsMain">
-                         <i class="fa fa-university b"></i>
-                         <a href="#" class="b">University name,</a>
-                         <a href="#" class="b">Departments,</a>
-                         <a href="#" class="b"><i class="fa fa-tag"></i>Faculty</a>
+                         
+                         
+                           @if(!empty($user->university))
+                             <a href="#" class="b"><i class="fa fa-university b"></i>{{ $user->university}}, </a>
+                             
+                           @else
+
+                           @endif
+                        
+                         
+                            @if(!empty($user->department))
+                             
+                             <a href="#" class="b">{{ $user->department}},</a>
+                             @else
+
+                             @endif
+                         
+                            <i class="fa fa-tag"></i>
+                            @foreach ($user->interests as $interest)
+                              @if(!empty($user->interests))
+                             
+                              <a href="#" class="b">{{ $interest->name}},</a>
+                              @else
+
+                              @endif
+                            @endforeach
+                         
                      </div>
                          <div class="main2">
-                            <i class="fa fa-plus u-mr1x"></i>
-                          <a href="#" class="b">Add a Biography</a>
+                           
                         </div>
                      <div class="main3">
 
@@ -40,12 +62,7 @@
                      <div class="main4" style="margin-top:15px;">
 
                        <button class="btn buthov1"><i class="fa fa-plus" style="margin-right:5px"></i>FOLLOW</button>
-                       <button class="btn buthov2"><i class="fa fa-comment" style="margin-right:3px"></i>MESSAGE</button>
-
-                      <ul>
-                        <li class="envelope"><a href="#"><i class="fa fa-envelope" style="color:#AFAFAF;"></i></a></li>
-                        <li class="twitter"><a href="#"><i class="fa fa-twitter" style="color:#AFAFAF;"></i></a></li>
-                    </ul>
+                     
                   </div>
                 </div>
             </div></div>
@@ -55,38 +72,46 @@
      <div class="container">
            <div class="row">
               <div class="col-md-5"><hr></div>
-              <div class="col-md-1">PAPERS</div>
+              <div class="col-md-2 text-center">PAPERS</div>
               <div class="col-md-5"><hr></div>
             </div>
-        <div class="row" style="margin-top:20px;">
-        <div class="col-md-12"> 
-          <div class="col-md-2 padClass">
-               <div style="width:90px;height:116px;">
-                    <a href="#">
-                    <img src="{{ url('img/pdf.png') }}"></a>
-               </div>
+          <div class="row" style="margin-top:20px;">
+          @if(count($user->files) > 0)
+            @foreach($user->files as $file )
+              <div class="col-md-12" style="margin-bottom:30px;"> 
+                <div class="col-md-2 padClass" >
+                     <div style="width:90px;height:116px;">
+                          <a href="#">
+                          <img src="{{ url('img/pdf.png') }}"></a>
+                     </div>
+                </div>
+                  <!-- <div class="col-md-10"> -->
+                  <a href="#" style="font-size:20px;color:gray;">{{ $file->title}}</a>
+                  <ul>
+                      <li>
+                          <a href="#">
+                              <i class="fa fa-bookmark" style="color:#428BCA;"></i> Bookmark
+                          </a>
+                      </li>
+                      <li><i class="fa fa-arrow-circle-o-down" style="color:#5E9F17"></i>
+                      <a href="#"> Downloaded</a></li>
+                      <li><i class="fa fa-eye fa-lg u-mr1x" style="color:#999999"></i><a href="#">{{ $file->numbers_of_views}} </a></li>
+                      
+                  </ul>
               </div>
-           
-            <!-- <div class="col-md-10"> -->
-            <a href="#" style="font-size:20px;color:gray;">Starting the Journey: Discovering the Point of D&T</a>
-            <ul>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-bookmark" style="color:#428BCA;"></i> Bookmark
-                    </a>
-                </li>
-                <li><i class="fa fa-arrow-circle-o-down" style="color:#5E9F17"></i>
-                <a href="#"> Downloaded</a></li>
-                <li><i class="fa fa-eye fa-lg u-mr1x" style="color:#999999"></i><a href="#"> 20</a></li>
-                <li style="border:none;"><i class="fa fa-ellipsis-h" style="color:#999999"></i><a href="#"> More</a></li>
-
-            </ul>
-              <!-- </div> -->
-            </div>  
-         </div>   
-         </div>
+            @endforeach
+          @else
+              <div class="col-md-12 text-center" > <h1>NO PAPERS</h1></div>
+          @endif
+             
+           </div>   
+       </div>
      </section>
 </section>
+@stop
+
+@section('footer')
+  @include('footer',['class'=>'bgColorGray'])
 @stop
 
 
