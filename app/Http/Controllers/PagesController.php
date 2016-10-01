@@ -12,7 +12,7 @@ class PagesController extends Controller
       if(Auth::guest()){
         return view('pages.index');
       } else {
-        return view('pages.home');
+        return view('pages.home', compact('user'));
       }
     }
     public function home(){
@@ -24,5 +24,7 @@ class PagesController extends Controller
     public function signUp(){
       return view('pages.signUp');
     }
+
+
 
 }

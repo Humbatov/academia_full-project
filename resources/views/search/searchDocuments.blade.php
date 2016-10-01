@@ -13,10 +13,10 @@
           <div class="title">
               <div class="container">
                   <div class="col-md-10 col-sm-6 col-xs-6">
-                      <h1 class="marginClear">Physics</h1>
-                      <p>
-                          528,655 Followers
-                      </p>
+                    <h1 class="marginClear">{{ $interest->name}}</h1>
+                    <p>
+                        {{ $interest->users()->count()}} Followers
+                    </p>
 
                   </div>
                   <div class="col-md-2 col-sm-6 col-xs-6">
@@ -27,8 +27,8 @@
           <div class="category">
               <div class="container">
                   <div class="col-md-12">
-                      <a href="{{ url('/search/peoples') }}">People</a>
-                      <a class="triangle" href="{{ url('/search/documents') }}">Document</a>
+                      <a href="{{ action('SearchController@searchPeople', ['id' => $interest->id] )}}">People</a>
+                      <a class="triangle" href="{{ action('SearchController@searchDocument', ['id' => $interest->id] )}}">Document</a>
                   </div>
               </div>
           </div>
@@ -38,96 +38,40 @@
                       <div class="col-md-9">
                           <div class="container">
 
-                              <div class="newPaper">
-                                  <div>
-                                      <div class="paperTitle">
-                                          <a href="">Lebendiges Mathematiklernen: Der Blick der Themenzentrierten Interaktion auf die Mathematikdidaktik</a>
-                                      </div>
-                                      <div class="paperText">
-                                          <p>Research studies show students' weaknesses in conceptual understanding of the integration. The aim of this paper is offering a sequence of activities to reach a mature conceptual understanding of integral. The
-                                              journey is started from exploring an area calculation method by partitioning, forming an algebraic sequence, and taking the limit of that sequence for obtaining the formal concept of integration. We also
-                                              planned the usage of spreadsheet program. During the journey, we make an effort to support students for quantitative reasoning. At the end of the journey, we hypothesize that students can reach the big idea
-                                              that " Integral is a special continuous sum and antiderivative is a genius method to calculate this sum " instead of " integral is an operation which is the inverse of derivative ". Consequently, the effect
-                                              of this learning journey was tested on 47 students and some clues were found showing the positive effect understanding the integration conceptually.</p>
-                                      </div>
-                                      <button class="pull-right moreButton">read more...</button>
-                                      <div class="clearfix"></div>
-                                      <div class="paperMenu">
-                                          <a href="" class="btn btn-default papA"><i class="fa fa-bookmark"></i>BOOKMARK</a>
-                                          <a href="" class="btn btn-default papA"><i class="fa fa-arrow-circle-o-down"></i>DOWNLOAD</a>
-                                          <h5>
-                                            by <a href="#" class="bold">Susanne Prediger</a>
-                                            <i>|</i>
-                                            <i class="fa fa-eye"></i>
-                                            4 <i>|</i>
-                                            <i class="fa fa-tag"></i>
-                                            <a href="#">Mathematics</a>,
-                                            <a href="#">Teaching method</a>
-                                       </h5>
-                                      </div>
-                                  </div>
-                                  <hr>
-                              </div>
-                              <div class="newPaper">
-                                  <div>
-                                      <div class="paperTitle">
-                                          <a href="">Lebendiges Mathematiklernen: Der Blick der Themenzentrierten Interaktion auf die Mathematikdidaktik</a>
-                                      </div>
-                                      <div class="paperText">
-                                          <p>Research studies show students' weaknesses in conceptual understanding of the integration. The aim of this paper is offering a sequence of activities to reach a mature conceptual understanding of integral. The
-                                              journey is started from exploring an area calculation method by partitioning, forming an algebraic sequence, and taking the limit of that sequence for obtaining the formal concept of integration. We also
-                                              planned the usage of spreadsheet program. During the journey, we make an effort to support students for quantitative reasoning. At the end of the journey, we hypothesize that students can reach the big idea
-                                              that " Integral is a special continuous sum and antiderivative is a genius method to calculate this sum " instead of " integral is an operation which is the inverse of derivative ". Consequently, the effect
-                                              of this learning journey was tested on 47 students and some clues were found showing the positive effect understanding the integration conceptually.</p>
-                                      </div>
-                                      <button class="pull-right moreButton">read more...</button>
-                                      <div class="clearfix"></div>
-                                      <div class="paperMenu">
-                                          <a href="" class="btn btn-default papA"><i class="fa fa-bookmark"></i>BOOKMARK</a>
-                                          <a href="" class="btn btn-default papA"><i class="fa fa-arrow-circle-o-down"></i>DOWNLOAD</a>
-                                          <h5>
-                                            by <a href="#" class="bold">Susanne Prediger</a>
-                                            <i>|</i>
-                                            <i class="fa fa-eye"></i>
-                                            4 <i>|</i>
-                                            <i class="fa fa-tag"></i>
-                                            <a href="#">Mathematics</a>,
-                                            <a href="#">Teaching method</a>
-                                       </h5>
-                                      </div>
-                                  </div>
-                                  <hr>
-                              </div>
-                              <div class="newPaper">
-                                  <div>
-                                      <div class="paperTitle">
-                                          <a href="">Lebendiges Mathematiklernen: Der Blick der Themenzentrierten Interaktion auf die Mathematikdidaktik</a>
-                                      </div>
-                                      <div class="paperText">
-                                          <p>Research studies show students' weaknesses in conceptual understanding of the integration. The aim of this paper is offering a sequence of activities to reach a mature conceptual understanding of integral. The
-                                              journey is started from exploring an area calculation method by partitioning, forming an algebraic sequence, and taking the limit of that sequence for obtaining the formal concept of integration. We also
-                                              planned the usage of spreadsheet program. During the journey, we make an effort to support students for quantitative reasoning. At the end of the journey, we hypothesize that students can reach the big idea
-                                              that " Integral is a special continuous sum and antiderivative is a genius method to calculate this sum " instead of " integral is an operation which is the inverse of derivative ". Consequently, the effect
-                                              of this learning journey was tested on 47 students and some clues were found showing the positive effect understanding the integration conceptually.</p>
-                                      </div>
-                                      <button class="pull-right moreButton">read more...</button>
-                                      <div class="clearfix"></div>
-                                      <div class="paperMenu">
-                                          <a href="" class="btn btn-default papA"><i class="fa fa-bookmark"></i>BOOKMARK</a>
-                                          <a href="" class="btn btn-default papA"><i class="fa fa-arrow-circle-o-down"></i>DOWNLOAD</a>
-                                          <h5>
-                                            by <a href="#" class="bold">Susanne Prediger</a>
-                                            <i>|</i>
-                                            <i class="fa fa-eye"></i>
-                                            4 <i>|</i>
-                                            <i class="fa fa-tag"></i>
-                                            <a href="#">Mathematics</a>,
-                                            <a href="#">Teaching method</a>
-                                       </h5>
-                                      </div>
-                                  </div>
-                                  <hr>
-                              </div>
+                              @foreach ($interest->files as $file)
+                                <div class="newPaper">
+                                    <div>
+                                        <div class="paperTitle">
+                                            <a href="">{{ $file->title}}</a>
+                                        </div>
+                                        <div class="paperText">
+                                            <p>
+                                              {{ $file->abstract}}
+                                            </p>
+                                        </div>
+                                        <button class="pull-right moreButton">read more...</button>
+                                        <div class="clearfix"></div>
+                                        <div class="paperMenu">
+                                            <a href="" class="btn btn-default papA"><i class="fa fa-bookmark"></i>BOOKMARK</a>
+                                            <a href="" class="btn btn-default papA"><i class="fa fa-arrow-circle-o-down"></i>DOWNLOAD</a>
+                                            <h5>
+                                              by <a href="#" class="bold">
+                                                {{ $file->user->name}} {{ $file->user->surname}}
+                                              </a>
+                                              <i>|</i>
+                                              <i class="fa fa-eye"></i>
+                                              {{ $file->numbers_of_views}}
+                                              <i>|</i>
+                                              <i class="fa fa-tag"></i>
+                                              @foreach ($file->interests()->get() as $interest)
+                                                <a href="#">{{ $interest->name}}</a>,
+                                              @endforeach
+                                         </h5>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                </div>
+                              @endforeach
                           </div>
                       </div>
                       <div class="col-md-12 text-center">

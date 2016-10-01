@@ -15,10 +15,10 @@
             </div>
             <div id="slidemenu">
 
-                <form class="navbar-form " role="form">
+                <form class="navbar-form" action='{{ action('SearchController@index')}}' role="form">
                     <div class="form-group">
                         <i class=" fa fa-search "></i>
-                        <input type="search" placeholder="search" class="form-control">
+                        <input type="search" name="search" placeholder="search" class="form-control">
                     </div>
                 </form>
 
@@ -40,7 +40,7 @@
                                 <ul class="triangle">
                                     <li>
                                         <a href="#">
-                                            <div>Your profile</div>
+                                            <div>{{ Auth::user()->name }} {{ Auth::user()->surname }}</div>
                                         </a>
                                     </li>
                                     <li>
@@ -64,7 +64,9 @@
                                 <img src="{{ url('img/IMG_0823.JPG') }}">
                             </a>
                         </div>
-                        <a class="pull-left user-name" href="#">Tofiq Aliyev</a>
+
+                          <a class="pull-left user-name" href="#">{{ Auth::user()->name }} {{ Auth::user()->surname }}</a>
+
                         <div class="clearfix"></div>
                     </li>
                     <li>

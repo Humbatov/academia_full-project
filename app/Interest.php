@@ -6,8 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Interest extends Model
 {
-  public function user()
+  public function users()
   {
     return $this->belongsToMany(User::class,'user_interest');
   }
+
+  public function files()
+  {
+    return $this->belongsToMany(File::class,'file_interest');
+  }
+
 }

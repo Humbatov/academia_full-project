@@ -14,19 +14,28 @@
 
 
 
-
+Route::get('/edit', function(){
+    return view('posts.edit');
+});
 
 Route::auth();
 
 Route::get('/','PagesController@index');
 
 Route::group(['middleware' => 'auth' ] , function(){
-    Route::get('search/documents','SearchController@searchDocument');
-    Route::get('search/peoples','SearchController@searchPeople');
-    Route::get('search','SearchController@index');
     Route::get('settings/account-removal','SettingsController@removal');
     Route::get('settings','SettingsController@account');
 });
+
+/*--------Create Post---------*/
+Route::post('post/create','FileController@store');
+Route::get('post/new','FileController@postEdit');
+/*--------Search---------*/
+Route::get('search/interest/{id}/people','SearchController@searchPeople');
+Route::get('search/interest/{id}/documents','SearchController@searchDocument');
+Route::get('search','SearchController@index');
+
+
 
 
 Route::get('signUp','PagesController@signUp');
@@ -34,3 +43,13 @@ Route::get('signUp','PagesController@signUp');
 
 
 Route::get('/home', 'HomeController@index');
+
+/*---------------------Admin--------------------- */
+Route::get('/admin', 'Admin\AdminController@index');
+Route::get('/admin/userList', 'Admin\AdminController@userList');
+Route::post('/admin/userList/{id}', 'UserController@destroy');
+Route::get('/admin/userList/{id}/interests', 'Admin\AdminController@interests');
+Route::post('/admin/user/file/{id}', 'FileController@destroy');
+Route::get('/admin/user/{id}/files', 'Admin\AdminController@files');
+Route::get('/admin/user/{id}', 'Admin\AdminController@user');
+Route::patch('/admin/user/{id}/update', 'UserController@update');
