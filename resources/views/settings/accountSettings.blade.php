@@ -7,7 +7,7 @@
 @section('container')
   <!--Setmain start-->
   <section class="container setMain">
-    <div class="row ">
+    <div class="row mainRow">
       <div class="col-md-offset-3 col-md-9 setImg">
         <div><img src="{{ url('img/1.png') }}"></div>
         <h4 class="myac">My Account</h4>
@@ -16,12 +16,12 @@
         <div class="col-md-offset-3 col-md-2 setButton">
           <ul>
             <li>
-              <a href="settings.html">
+              <a href="{{ url('settings') }}">
                 <div>Account Settings</div>
               </a>
             </li>
             <li>
-              <a href="removeAc.html">
+              <a href="{{ url('settings/account-removal') }}">
                 <div>Account Removal</div>
               </a>
             </li>

@@ -133,3 +133,6 @@ $(document).ready(function() {
 
 
 });
+function getFile(){
+   $("#upfile").click();
+ }
