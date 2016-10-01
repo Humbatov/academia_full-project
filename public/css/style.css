@@ -1909,6 +1909,40 @@ body {
     #mainFileUpload .chooseFile #yourBtn:hover {
       background: #73863b; }
 
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  background: #F1F1F1; }
+
+#mainFileEdit h5 {
+  margin-top: 65px;
+  margin-bottom: 60px;
+  font-size: 20px;
+  font-weight: bold; }
+
+#mainFileEdit .editFile {
+  margin-bottom: 30px; }
+  #mainFileEdit .editFile form {
+    background: #FFFFFF;
+    padding: 70px 30px;
+    -webkit-border: 1px solid lightgrey;
+    -moz-border: 1px solid lightgrey;
+    border: 1px solid lightgrey; }
+    #mainFileEdit .editFile form label {
+      color: #777777; }
+    #mainFileEdit .editFile form input {
+      background: #F8F8F8; }
+    #mainFileEdit .editFile form textarea {
+      background: #F8F8F8; }
+  #mainFileEdit .editFile button {
+    width: 100%;
+    color: #FFFFFF;
+    border: none;
+    height: 50px;
+    margin-top: 30px;
+    background: #B8B8B8; }
+
 /*  Search  */
 #search .container {
   margin: 20px auto;

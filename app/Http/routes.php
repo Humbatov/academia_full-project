@@ -29,6 +29,7 @@ Route::group(['middleware' => 'auth' ] , function(){
     Route::resource('myprofile','PagesController@myprofile');
     Route::resource('userprofile','PagesController@userprofile');
     Route::resource('fileUpload','PagesController@fileUpload');
+    Route::resource('fileDetails','PagesController@fileDetails');
 });
 
 

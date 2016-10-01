@@ -1,0 +1,52 @@
+ $white: #FFFFFF;
+$lGrey:#F1F1F1;
+$grey:#999999;
+
+body{
+	margin:0;
+	padding:0;
+	font-size: 16px;
+	background: $lGrey;
+}
+
+#mainFileEdit{
+	
+	h5{
+		margin-top: 65px;
+   		margin-bottom: 60px;
+   		font-size: 20px;
+   		font-weight: bold;
+	}
+	.editFile{
+		
+	    
+		margin-bottom: 30px;
+
+		form{
+			background: $white;
+			padding:70px 30px;
+   			-webkit-border: 1px solid lightgrey;
+			-moz-border: 1px solid lightgrey;
+			border: 1px solid lightgrey;
+			label{
+				color:#777777;
+				
+			}
+			input{
+				background:#F8F8F8;
+			}
+			textarea{
+				background:#F8F8F8;
+			}
+		}
+
+   		button{
+   			width:100%;
+   			color:$white;
+   			border:none;
+   			height: 50px;
+   			margin-top: 30px;
+   			background: #B8B8B8;
+   		}
+	}
+}

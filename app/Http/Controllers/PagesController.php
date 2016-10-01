@@ -34,5 +34,8 @@ class PagesController extends Controller
     public function fileUpload(){
       return view('pages.fileUpload');
     }
+     public function fileDetails(){
+      return view('pages.fileDetails');
+    }
 
 }
