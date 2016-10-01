@@ -16,13 +16,23 @@ class PagesController extends Controller
       }
     }
     public function home(){
-
+      $users=User::all();
+      return view('pages.home',compact('users'));
     }
     public function login(){
       return view('pages.login');
     }
     public function signUp(){
       return view('pages.signUp');
+    }
+    public function myprofile(){
+      return view('pages.myprofile');
+    }
+    public function userprofile(){
+      return view('pages.userprofile');
+    }
+    public function fileUpload(){
+      return view('pages.fileUpload');
     }
 
 }

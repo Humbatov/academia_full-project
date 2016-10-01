@@ -16,12 +16,12 @@
         <div class="col-md-offset-3 col-md-2 setButton">
           <ul>
             <li>
-              <a href="settings.html">
+              <a href="{{ url('settings') }}">
                 <div>Account Settings</div>
               </a>
             </li>
             <li>
-              <a href="setting_account_remove.html">
+              <a href="{{ url('settings/account-removal') }}">
                 <div>Account Removal</div>
               </a>
             </li>

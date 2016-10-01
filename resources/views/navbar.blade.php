@@ -9,7 +9,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </a>
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="{{ url('/') }}">
                     <img src="{{ url('img/A.svg') }}">
                 </a>
             </div>
@@ -24,7 +24,7 @@
 
                 <ul id="navbar-desktop" class="nav navbar-nav navbar-right">
                     <li><a class="nav-link" href="{{ url('/') }}">HOME</a></li>
-                    <li><a href="#" class="btn button  upload "><i class="fa fa-upload"></i> UPLOAD</a></li>
+                    <li><a href="{{ url('/fileUpload') }}" class="btn button  upload "><i class="fa fa-upload"></i> UPLOAD</a></li>
                     <li>
                         <a href="#" class="btn button-notif button"><i class="fa fa-envelope-o"></i></a>
                     </li>
@@ -39,12 +39,12 @@
                                 </a>
                                 <ul class="triangle">
                                     <li>
-                                        <a href="#">
+                                        <a href="{{ url('/myprofile') }}">
                                             <div>Your profile</div>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="{{ url('/settings') }}">
                                             <div>Accounte settings</div>
                                         </a>
                                     </li>
@@ -64,21 +64,21 @@
                                 <img src="{{ url('img/IMG_0823.JPG') }}">
                             </a>
                         </div>
-                        <a class="pull-left user-name" href="#">Tofiq Aliyev</a>
+                        <a class="pull-left user-name" href="{{ url('/myprofile') }}">Tofiq Aliyev</a>
                         <div class="clearfix"></div>
                     </li>
                     <li>
                         <div class="clearfix"></div>
-                        <a href="#"><i class="fa fa-home"></i> Home</a></li>
-                    <li><a href="#"><i class="fa fa-upload"></i> Upload</a></li>
+                        <a href="{{ url('/') }}"><i class="fa fa-home"></i> Home</a></li>
+                    <li><a href="{{ url('/fileUpload') }}"><i class="fa fa-upload"></i> Upload</a></li>
                     <li>
                         <a href="#"><i class="fa fa-envelope-o"></i> Bookmark</a>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-bell-o"></i> Notification</a>
                     </li>
-                    <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
-                    <li><a href="#"><i class="fa fa-sign-out"></i> Logout</a></li>
+                    <li><a href="{{ url('/settings') }}"><i class="fa fa-cog"></i> Settings</a></li>
+                    <li><a href="{{ url('logout') }}"><i class="fa fa-sign-out"></i> Logout</a></li>
 
                 </ul>
 
