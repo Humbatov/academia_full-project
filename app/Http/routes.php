@@ -14,7 +14,13 @@
 
 
 
+/*--------Search---------*/
+Route::get('search/interest/{id}/people','SearchController@searchPeople');
+Route::get('search/interest/{id}/documents','SearchController@searchDocument');
+Route::get('search','SearchController@index');
 
+/*--------Follow---------*/
+Route::get('follow/interest/{id}','FollowController@interest');
 
 Route::auth();
 Route::get('paper/{id}', 'FileController@show');
@@ -38,10 +44,7 @@ Route::get('/','PagesController@index');
 /*--------Create Post---------*/
 Route::post('post/create','FileController@store');
 Route::get('post/new','FileController@postEdit');
-/*--------Search---------*/
-Route::get('search/interest/{id}/people','SearchController@searchPeople');
-Route::get('search/interest/{id}/documents','SearchController@searchDocument');
-Route::get('search','SearchController@index');
+
 
 
 

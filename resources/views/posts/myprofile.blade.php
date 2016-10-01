@@ -18,7 +18,7 @@
             <div class="col-md-10">
                 <div>
 
-                     <a href="#"><h4>{{ Auth::user()->name}} {{ Auth::user()->surname}}</h4></a>
+                     <a href=""><h4>{{ Auth::user()->name}} {{ Auth::user()->surname}}</h4></a>
 
                      <div class="myMain">
                        @if (!empty(Auth::user()->university) || !empty(Auth::user()->department) || !empty(Auth::user()->position))
@@ -39,7 +39,7 @@
                          @if (count(Auth::user()->interests) != 0)
                            <i class="fa fa-tag"></i>
                            @foreach (Auth::user()->interests as $interest)
-                             <a href="#" class="b">{{ $interest->name}}</a>
+                             <a href="{{ action('SearchController@searchPeople', ['id' => $interest->id])}}" class="b">{{ $interest->name}}</a>
                            @endforeach
                          @endif
 
@@ -77,7 +77,7 @@
               </div>
              </div>
            <div class="col-md-10" style="padding-top: 19px">
-           <a href="{{ url('showPaper') }}" style="font-size:20px;color:gray;">{{ $file->title }}hjjhj</a>
+           <a href="{{ action('FileController@show', ['id' => $file->id])}}" style="font-size:20px;color:gray;">{{ $file->title }}hjjhj</a>
            <ul style="margin-top:12px; padding-left: 38px;">
                <li>
                    <a href="#">
@@ -85,7 +85,7 @@
                    </a>
                </li>
                <li><i class="fa fa-arrow-circle-o-down" style="color:#5E9F17"></i>
-               <a href=""> ddaded</a></li>
+               <a href=""> Download</a></li>
                <li style="border: none;"><i class="fa fa-eye fa-lg u-mr1x" style="color:#999999"></i><a style="vertical-align: text-bottom;" href="#"> {{ $file->numbers_of_views }}</a></li>
 
 

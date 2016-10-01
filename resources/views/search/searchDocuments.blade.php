@@ -20,7 +20,9 @@
 
                   </div>
                   <div class="col-md-2 col-sm-6 col-xs-6">
-                      <a class="btn btn-success pull-right" href="#">Follow</a>
+                      <a class="btn btn-success pull-right" href="{{ action('FollowController@interest', ['id' => $interest->id])}}">
+                        Follow
+                      </a>
                   </div>
               </div>
           </div>
@@ -42,7 +44,7 @@
                                 <div class="newPaper">
                                     <div>
                                         <div class="paperTitle">
-                                            <a href="">{{ $file->title}}</a>
+                                            <a href="{{ action('FileController@show', ['id' => $file->id])}}">{{ $file->title}}</a>
                                         </div>
                                         <div class="paperText">
                                             <p>
@@ -55,7 +57,7 @@
                                             <a href="" class="btn btn-default papA"><i class="fa fa-bookmark"></i>BOOKMARK</a>
                                             <a href="" class="btn btn-default papA"><i class="fa fa-arrow-circle-o-down"></i>DOWNLOAD</a>
                                             <h5>
-                                              by <a href="#" class="bold">
+                                              by <a href="{{ action('PagesController@userprofile', ['id' => $file->user->id,'name' => $file->user->name,'surname' => $file->user->surname])}}" class="bold">
                                                 {{ $file->user->name}} {{ $file->user->surname}}
                                               </a>
                                               <i>|</i>
@@ -64,7 +66,7 @@
                                               <i>|</i>
                                               <i class="fa fa-tag"></i>
                                               @foreach ($file->interests()->get() as $interest)
-                                                <a href="#">{{ $interest->name}}</a>,
+                                                <a href="{{ action('SearchController@searchPeople', ['id' => $interest->id])}}">{{ $interest->name}}</a>,
                                               @endforeach
                                          </h5>
                                         </div>

@@ -26,12 +26,16 @@ class PagesController extends Controller
     public function signUp(){
       return view('pages.signUp');
     }
-    // public function myprofile(){
-    //   return view('pages.myprofile');
-    // }
+    public function myprofile(){
+      return view('posts.myprofile');
+    }
     public function userprofile($id){
       $user=User::find($id);
-      return view('pages.userprofile',compact('user'));
+      if ($user->id == Auth::user()->id) {
+        return view('posts.myprofile');
+      }else {
+        return view('pages.userprofile',compact('user'));
+      }
     }
     public function fileUpload(){
       return view('pages.fileUpload');
