@@ -42,8 +42,8 @@
                           </div>
                           <div class="info">
                               <h3 class="marginClear">
-                    <a href="#">{{ $user->name }} {{ $user->surname }}</a>
-                  </h3>
+                          <a href="{{action('PagesController@userprofile',['id'=>$user->id,'name'=>$user->name,'surname'=>$user->surname])}}">{{ $user->name }} {{ $user->surname }}</a>
+                        </h3>
                               <p>
                                   @foreach ($user->interests()->get() as $interest)
                                     <a href="#">{{ $interest->name}},</a>
