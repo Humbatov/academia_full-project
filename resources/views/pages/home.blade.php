@@ -13,8 +13,9 @@
       <section id="content" class="col-md-12">
           <div class="container " style="padding: 0;">
               <!--contentin esas hissesi-sol-->
-              <section class="papers animated col-sm-12 col-md-9 container fadeInDown">
-              
+
+              <section class="papers animated col-sm-12 col-md-10 col-md-offset-1 container fadeInDown">
+
                   <div class="newPaper">
                       <div>
                           <div class="paperAdd">
@@ -48,42 +49,9 @@
                           </div>
                       </div>
                   </div>
-                
-              </section>
-              <section class="jobBoard container col-sm-10 col-md-3">
-                  <!-- this block(newjob) avto added-->
-                  <div class="newJobs ">
-                      <div class="job">
-                          <h5>Job Board</h5>
-                          <div class="jobInfo">
-                              <a href="#" class="bold">Assistant, Associate or Full Professor in Family Health Faculty</a>
-                              <span>University of California, San Francisco</span>
-                          </div>
-                          <div class="jobInfo">
-                              <a href="#" class="bold">Assistant, Associate or Full Professor in Family Health Faculty</a>
-                              <span>University of California, San Francisco</span>
-                          </div>
-
-                          <a href="" class="btn btn-default advertise">ADVERTISE WITH US <i class="fa fa-angle-right"></i></a>
-                      </div>
-                  </div>
-                  <div class="newJobs ">
-                      <div class="job">
-                          <h5>Job Board</h5>
-                          <div class="jobInfo">
-                              <a href="#" class="bold">Assistant, Associate or Full Professor in Family Health Faculty</a>
-                              <span>University of California, San Francisco</span>
-                          </div>
-                          <div class="jobInfo">
-                              <a href="#" class="bold">Assistant, Associate or Full Professor in Family Health Faculty</a>
-                              <span>University of California, San Francisco</span>
-                          </div>
-
-                          <a href="" class="btn btn-default advertise">ADVERTISE WITH US <i class="fa fa-angle-right"></i></a>
-                      </div>
-                  </div>
 
               </section>
+
 
 
               <!--content end-->

@@ -1,4 +1,4 @@
-  
+
   .marginClear {
     margin: 0; }
 
@@ -12,7 +12,9 @@
     overflow: hidden;
     border-bottom: solid 1px #ddd;
     border-top: solid 1px  #ddd;
-    background-color: #f8f8f8; }
+    background-color: #f8f8f8;
+    
+  }
     .userinfo .container {
       padding-top: 40px;
       padding-bottom: 40px;
@@ -38,8 +40,7 @@
       width: 180px;
       height: 180px; }
 
-  .col-md-2 {
-    padding: 0; }
+
 
   .usMain, .main2 {
     width: 740px;
@@ -48,11 +49,11 @@
 
 
   .buthov1 {
-    
+
     background: #92AA4A; }
 
   .buthov2 {
-    
+
     color: !important;
     background: white !important; }
 
@@ -80,7 +81,7 @@
   #PDF{
     margin-top:50px;
 
-  .col-md-1{
+  .col-md-2{
      text-align:center;
      font-size:15px;
      font-weight:700;
@@ -109,7 +110,7 @@
   li{
     display:inline-block;
     border-right:1px solid gray;
-    
+
     height:20px;
     text-align:center;
     margin:5px;
@@ -120,6 +121,6 @@
 
    padding-left:  40px !important;
    padding-bottom:15px;
-   
+
 
   }

@@ -12,16 +12,16 @@
 				<div class="col-md-6 col-md-push-3 chooseFile text-center">
 					<form action="#type your action here" method="POST" enctype="multipart/form-data" name="myForm">
 						<div id="yourBtn" onclick="getFile()">CHOOSE FILES</div>
-						
+
 						<div style='height: 0px;width: 0px; overflow:hidden;'>
 							<input id="upfile" type="file" value="upload"/>
 						</div>
-					
+
 					</form>
 				</div>
 
 			</div>
-			<a href="#">No file to upload?</a>
+			<a href="{{ action('FileController@postEdit')}}">No file to upload?</a>
 		</center>
 	</section>
 @stop

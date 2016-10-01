@@ -5,9 +5,9 @@
 @stop
 
 @section('container')
-    
+
 <section id="mainheader">
-       
+
     <div class="userinfo">
         <div class="container">
             <div class="col-md-2">
@@ -17,19 +17,35 @@
             </div>
             <div class="col-md-10">
                 <div>
-                 
-                     <a href="#"><h4>Fidan Djabrayilova</h4></a>
-                   
+
+                     <a href="#"><h4>{{ Auth::user()->name}} {{ Auth::user()->surname}}</h4></a>
+
                      <div class="myMain">
-                         <i class="fa fa-university b"></i>
-                         <a href="#" class="b">University name,</a>
-                         <a href="#" class="b">Departments,</a>
-                         <a href="#" class="b"><i class="fa fa-tag"></i>Faculty</a>
+                       @if (!empty(Auth::user()->university) || !empty(Auth::user()->department) || !empty(Auth::user()->position))
+                          <i class="fa fa-university b"></i>
+                          @if (!empty(Auth::user()->university))
+                            <a href="#" class="b">{{Auth::user()->university}},</a>
+                          @endif
+
+                          @if (!empty(Auth::user()->department))
+                            <a href="#" class="b">{{Auth::user()->department}},</a>
+                          @endif
+
+                          @if (!empty(Auth::user()->position))
+                            <a href="#" class="b">{{Auth::user()->position}}</a>
+                          @endif
+                       @endif
+
+                         @if (count(Auth::user()->interests) != 0)
+                           <i class="fa fa-tag"></i>
+                           @foreach (Auth::user()->interests as $interest)
+                             <a href="#" class="b">{{ $interest->name}}</a>
+                           @endforeach
+                         @endif
+
+
                      </div>
-                         <div class="main2">
-                            <i class="fa fa-plus u-mr1x"></i>
-                          <a href="#" class="b">Add a Biography</a>
-                        </div>
+
                      <div class="main3">
 
                          <a href="#" class="c"><span>0 </span>Followes </a><span class="span">|</span>
@@ -38,31 +54,55 @@
                      </div>
                      <div class="main4" style="margin-top:15px;">
 
-                    <button class=" buthov1"><i class="fa fa-file" style="margin-right:5px"></i>UPLOAD</button>
-                    <button class=" buthov2"><i class="fa fa-pencil" style="margin-right:3px"></i>EDIT</button></div>
                 </div>
             </div>
         </div>
      </div>
-     
-     <section id="designSystems">
-        <div class="container">
-          <div class="col-md-12 col">
-              <div class="uv">
-                  <div class="text1">Boost Citations by 69%
-                  </div>
-                  <div class="test2">A study recently published in <i>PLOS ONE</i> found that papers uploaded to Academia.edu receive a 69%<br> boost in citations over 5 years.<br>
-                  
-                  <button class="button1">UPLOAD PAPERS</button><br>
-                  <button class="button2">DO THIS LATER</button>
+ </section>
+ <section id="PDF">
+   <div class="container">
+     <div class="row">
+        <div class="col-md-5"><hr></div>
+        <div class="col-md-2 text-center">PAPERS</div>
+        <div class="col-md-5"><hr></div>
+      </div>
+      @if (count(Auth::user()->files) > 0)
+        @foreach (Auth::user()->files as $file)
+       <div class="row" style="margin-top:20px;">
+       <div class="col-md-12" style="margin-bottom: 20px">
+         <div class="col-md-2 padClass">
+              <div style="width:90px;height:116px;">
+                   <a href="#">
+                   <img src="{{ url('img/pdf.png') }}"></a>
               </div>
-          </div>
+             </div>
+           <div class="col-md-10" style="padding-top: 19px">
+           <a href="#" style="font-size:20px;color:gray;">{{ $file->title }}</a>
+           <ul style="margin-top:12px; padding-left: 38px;">
+               <li>
+                   <a href="#">
+                       <i class="fa fa-bookmark" style="color:#428BCA;"></i> Bookmark
+                   </a>
+               </li>
+               <li><i class="fa fa-arrow-circle-o-down" style="color:#5E9F17"></i>
+               <a href="#"> Downloaded</a></li>
+               <li style="border: none;"><i class="fa fa-eye fa-lg u-mr1x" style="color:#999999"></i><a style="vertical-align: text-bottom;" href="#"> {{ $file->numbers_of_views }}</a></li>
+
+
+           </ul>
+              </div>
+           </div>
         </div>
+        @endforeach
+      @else
+        <div style="margin-bottom:110px;" class="container">
+          <h1 class="text-center">No papers</h1>
         </div>
-     </section>
+      @endif
+   </div>
  </section>
 
-    
+
 @stop
 @section('footer')
   @include('footer',['class'=>'bgColorGray'])

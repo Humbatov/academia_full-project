@@ -31,21 +31,6 @@ $(document).ready(function() {
 
     });
 });
-//fixed jobBoard
-$(document).ready(function() {
-
-    $(window).scroll(function() {
-        var Top = $(this).scrollTop();
-        if (Top >= 200) {
-            $(".jobBoard").addClass('fixed')
-        };
-
-        if (Top < 200) {
-            $(".jobBoard").removeClass('fixed')
-        };
-
-    })
-})
 
 //collapse profil menu
 $(document).ready(function() {
@@ -133,6 +118,7 @@ $(document).ready(function() {
 
 
 });
-function getFile(){
-   $("#upfile").click();
- }
+
+function getFile() {
+    $("#upfile").click();
+}

@@ -43,6 +43,7 @@
                           </div>
                   <div class="SignUpForm">
                     <form class="js-signup-email-form u-mb8x" action=" " accept-charset="UTF-8" method="post">
+                      {{ csrf_token() }}
                       <input name="utf8" type="hidden" value="✓">
                       <input type="hidden" name=" " value=" ">
                       <div class="row">

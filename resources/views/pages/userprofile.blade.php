@@ -9,11 +9,11 @@
   <div class="userinfo">
         <div class="container">
         <div class="col-md-12">
-            <div class="col-md-2">
-              
+            <div class="col-md-2 paddingClear">
+
                 <img src="{{ url('img/profile.png') }}">
             </div>
-           
+
             <div class="col-md-10">
                 <div>
                   <ul>
@@ -59,14 +59,14 @@
               <div class="col-md-5"><hr></div>
             </div>
         <div class="row" style="margin-top:20px;">
-        <div class="col-md-12"> 
+        <div class="col-md-12">
           <div class="col-md-2 padClass">
                <div style="width:90px;height:116px;">
                     <a href="#">
                     <img src="{{ url('img/pdf.png') }}"></a>
                </div>
               </div>
-           
+
             <!-- <div class="col-md-10"> -->
             <a href="#" style="font-size:20px;color:gray;">Starting the Journey: Discovering the Point of D&T</a>
             <ul>
@@ -82,12 +82,9 @@
 
             </ul>
               <!-- </div> -->
-            </div>  
-         </div>   
+            </div>
+         </div>
          </div>
      </section>
 </section>
 @stop
-
-
-

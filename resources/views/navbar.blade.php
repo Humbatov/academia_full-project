@@ -39,7 +39,7 @@
                                 </a>
                                 <ul class="triangle">
                                     <li>
-                                        <a href="{{ url('/myprofile') }}">
+                                        <a href="{{ action('PagesController@myprofile', ['name'=> Auth::user()->name,'surname'=> Auth::user()->surname]) }}">
                                             <div>{{ Auth::user()->name }} {{ Auth::user()->surname }}</div>
                                         </a>
                                     </li>
@@ -64,7 +64,7 @@
                                 <img src="{{ url('img/IMG_0823.JPG') }}">
                             </a>
                         </div>
-                          <a class="pull-left user-name" href="{{ url('/myprofile') }}">{{ Auth::user()->name }} {{ Auth::user()->surname }}</a>
+                          <a class="pull-left user-name" href="{{ action('PagesController@myprofile', ['name'=> Auth::user()->name,'surname'=> Auth::user()->surname]) }}">{{ Auth::user()->name }} {{ Auth::user()->surname }}</a>
 
                         <div class="clearfix"></div>
                     </li>
