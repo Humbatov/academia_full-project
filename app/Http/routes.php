@@ -23,8 +23,20 @@ Route::auth();
 Route::get('/','PagesController@index');
 
 Route::group(['middleware' => 'auth' ] , function(){
+
     Route::get('settings/account-removal','SettingsController@removal');
     Route::get('settings','SettingsController@account');
+
+    Route::get('search/documents','SearchController@searchDocument');
+    Route::get('search/peoples','SearchController@searchPeople');
+    Route::get('search','SearchController@index');
+    Route::resource('settings/account-removal','SettingsController@removal');
+    Route::resource('settings','SettingsController@account');
+    Route::resource('myprofile','PagesController@myprofile');
+    Route::resource('userprofile','PagesController@userprofile');
+    Route::resource('fileUpload','PagesController@fileUpload');
+    Route::resource('fileDetails','PagesController@fileDetails');
+
 });
 
 /*--------Create Post---------*/

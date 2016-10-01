@@ -1,0 +1,56 @@
+$white: #FFFFFF;
+$lGrey:#F1F1F1;
+$grey:#999999;
+
+body{
+	margin:0;
+	padding:0;
+	font-size: 16px;
+	background: $lGrey;
+}
+
+#mainFileUpload{
+	a{
+		margin-top: 20px;
+		color:#999999;
+		font-weight: bold;
+	}
+	h5{
+		margin-top: 65px;
+   		margin-bottom: 60px;
+   		font-size: 20px;
+   		font-weight: bold;
+	}
+	.chooseFile{
+		background: $white;
+	    padding-top: 70px;
+   		padding-bottom: 70px;
+   		-webkit-border: 1px dashed lightgrey;
+		-moz-border: 1px dashed lightgrey;
+		border: 1px dashed lightgrey;
+		margin-bottom: 30px;
+
+   		h4{
+   			margin-bottom: 30px;
+   		}
+		#yourBtn{
+			margin:0 auto;
+			color:$white;
+		   font-family: calibri;
+		   width: 266px;
+	       padding-top: 15px;
+   		   padding-bottom: 15px;
+		   -webkit-border-radius: 3px;
+		   -moz-border-radius: 3px;
+		   border: 1px solid green; 
+		   text-align: center;
+		   background-color: #92AA4A;
+		   cursor:pointer;
+		   font-weight: bold;
+
+		   &:hover{
+		   	background: darken(#92AA4A, 10%);
+		   }
+		 }
+	}
+}
