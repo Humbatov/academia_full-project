@@ -77,7 +77,7 @@
               </div>
              </div>
            <div class="col-md-10" style="padding-top: 19px">
-           <a href="#" style="font-size:20px;color:gray;">{{ $file->title }}</a>
+           <a href="{{ url('showPaper') }}" style="font-size:20px;color:gray;">{{ $file->title }}hjjhj</a>
            <ul style="margin-top:12px; padding-left: 38px;">
                <li>
                    <a href="#">
@@ -85,7 +85,7 @@
                    </a>
                </li>
                <li><i class="fa fa-arrow-circle-o-down" style="color:#5E9F17"></i>
-               <a href="#"> Downloaded</a></li>
+               <a href=""> ddaded</a></li>
                <li style="border: none;"><i class="fa fa-eye fa-lg u-mr1x" style="color:#999999"></i><a style="vertical-align: text-bottom;" href="#"> {{ $file->numbers_of_views }}</a></li>
 
 

@@ -17,21 +17,15 @@
 
 
 Route::auth();
+Route::get('paper/{id}', 'FileController@show');
 Route::get('user/{id}/{name}{surname}','PagesController@userprofile');
+
 
 
 Route::group(['middleware' => 'auth' ] , function(){
 
     Route::get('settings/account-removal','SettingsController@removal');
     Route::get('settings','SettingsController@account');
-
-    Route::get('search/documents','SearchController@searchDocument');
-    Route::get('search/peoples','SearchController@searchPeople');
-    Route::get('search','SearchController@index');
-    Route::resource('settings/account-removal','SettingsController@removal');
-    Route::resource('settings','SettingsController@account');
-
-
     Route::resource('fileDetails','PagesController@fileDetails');
 
 });
@@ -52,6 +46,7 @@ Route::get('search','SearchController@index');
 
 
 Route::get('/home', 'HomeController@index');
+
 
 /*---------------------Admin--------------------- */
 Route::get('/admin', 'Admin\AdminController@index');
