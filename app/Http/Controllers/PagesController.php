@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Auth;
 use App\Http\Requests;
+use App\User;
 
 class PagesController extends Controller
 {
@@ -28,8 +29,9 @@ class PagesController extends Controller
     public function myprofile(){
       return view('pages.myprofile');
     }
-    public function userprofile(){
-      return view('pages.userprofile');
+    public function userprofile($id){
+      $user=User::find($id);
+      return view('pages.userprofile',compact('user'));
     }
     public function fileUpload(){
       return view('pages.fileUpload');

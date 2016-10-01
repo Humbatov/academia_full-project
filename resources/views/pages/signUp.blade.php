@@ -11,7 +11,7 @@
                  <div class="Content1 center-block u-mt20x">
                      <div class="u-taCenter">
                      <!-- Logo DEYISHIKLIK -->
-                         <img class="Logo1" src="{{ url('img/academia-logo-redesign-2015.svg') }}" class="logo"" style="width: 178px;height: 22px;" alt="Academia logo redesign 2015">
+                         <img class="Logo1" src="{{ url('img/academia-logo-redesign-2015.svg') }}" class="logo" style="width: 178px;height: 22px;" alt="Academia logo redesign 2015">
                      </div>
 
                      <div class="u-mt2x"></div>
@@ -43,7 +43,9 @@
                           </div>
                   <div class="SignUpForm">
                     <form class="js-signup-email-form u-mb8x" action=" " accept-charset="UTF-8" method="post">
+
                       {{ csrf_token() }}
+
                       <input name="utf8" type="hidden" value="✓">
                       <input type="hidden" name=" " value=" ">
                       <div class="row">

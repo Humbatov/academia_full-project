@@ -17,6 +17,7 @@
 
 
 Route::auth();
+Route::get('user/{id}/{name}{surname}','PagesController@userprofile');
 
 
 Route::group(['middleware' => 'auth' ] , function(){
@@ -31,7 +32,6 @@ Route::group(['middleware' => 'auth' ] , function(){
     Route::resource('settings','SettingsController@account');
 
 
-    Route::resource('userprofile','PagesController@userprofile');
     Route::resource('fileDetails','PagesController@fileDetails');
 
 });
@@ -49,11 +49,6 @@ Route::get('search/interest/{id}/people','SearchController@searchPeople');
 Route::get('search/interest/{id}/documents','SearchController@searchDocument');
 Route::get('search','SearchController@index');
 
-
-
-
-Route::get('signUp','PagesController@signUp');
-// Route::resource('login','PagesController@login');
 
 
 Route::get('/home', 'HomeController@index');

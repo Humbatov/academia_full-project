@@ -38,6 +38,7 @@
 
                          <div class="col-xs-12 u-positionRelative u-mt6x u-mb8x">
                            <form action=" " accept-charset="UTF-8" method="post">
+                           {{csrf_token()}}
                              <input name="utf8" type="hidden" value="✓">
                               <input type="hidden" name=" " value=" ">
                               <div class="form-group">
