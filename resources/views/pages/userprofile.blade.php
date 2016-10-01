@@ -43,7 +43,7 @@
                             @foreach ($user->interests as $interest)
                               @if(!empty($user->interests))
 
-                              <a href="#" class="b">{{ $interest->name}},</a>
+                              <a href="{{ action('SearchController@searchPeople', ['id' => $interest->id])}}" class="b">{{ $interest->name}},</a>
                               @else
 
                               @endif
@@ -87,7 +87,7 @@
                      </div>
                 </div>
                   <!-- <div class="col-md-10"> -->
-                  <a href="#" style="font-size:20px;color:gray;">{{ $file->title}}</a>
+                  <a href="{{ action('FileController@show', ['id' => $file->id])}}" style="font-size:20px;color:gray;">{{ $file->title}}</a>
                   <ul>
                       <li>
                           <a href="#">
@@ -95,7 +95,7 @@
                           </a>
                       </li>
                       <li><i class="fa fa-arrow-circle-o-down" style="color:#5E9F17"></i>
-                      <a href="#"> Downloaded</a></li>
+                      <a href=""> Download</a></li>
                       <li><i class="fa fa-eye fa-lg u-mr1x" style="color:#999999"></i><a href="#">{{ $file->numbers_of_views}} </a></li>
 
                   </ul>

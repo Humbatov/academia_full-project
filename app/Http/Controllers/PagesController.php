@@ -26,9 +26,9 @@ class PagesController extends Controller
     public function signUp(){
       return view('pages.signUp');
     }
-    public function myprofile(){
-      return view('pages.myprofile');
-    }
+    // public function myprofile(){
+    //   return view('pages.myprofile');
+    // }
     public function userprofile($id){
       $user=User::find($id);
       return view('pages.userprofile',compact('user'));

@@ -42,7 +42,7 @@
                         </div>
                         <div class="info">
                             <p class="marginClear">
-                                <a href="#">{{ $user->name }} {{ $user->surname }}</a>
+                                <a href="{{ action('PagesController@userprofile', ['id' => $user->id,'name' => $user->name,'surname' => $user->surname])}}">{{ $user->name }} {{ $user->surname }}</a>
                             </p>
                             <span><span class="number">{{ $user->files()->count()}}</span> Papers</span>
                             <span class="grayLight">|</span>

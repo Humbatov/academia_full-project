@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Redirect;
 use App\Http\Requests;
 use App\File;
 use Auth;
-
+use App\User;
 class FileController extends Controller
 {
     /**
@@ -68,7 +68,8 @@ class FileController extends Controller
      */
     public function show($id)
     {
-        //
+        $file = File::find($id);
+        return view('showPaper', compact('file'));
     }
 
     /**
@@ -79,7 +80,7 @@ class FileController extends Controller
      */
     public function edit($id)
     {
-        //
+
     }
 
     /**
